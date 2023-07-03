@@ -1,13 +1,77 @@
-# TODO List Manager
+# Gerenciador de Tarefas - TODO App
 
-### vitorluigiorsini@gmail.com
+## 💻 Projeto
 
-## Rodar projeto localmente
+Aplicação web para gerenciar tarefas. O usuário poderá criar, editar, excluir e visualizar sua lista de tarefas.
 
-- 1. dentro da pasta cliente rodar npm install
-- 2. dentro da pasta server rodar npm install
-- 3. na raiz do projeto rodar em um terminal npm run server
-- 4. na raiz do projeto rodar em um terminal npm run client
+## 🚀 Tecnologias
 
-* Necessário ter postgres instalardo e configurar variáveis de ambiente para se conectar.
-  Criar banco de dados e rodar migrations para criar tabelas.
+Este projeto foi desenvolvido com as principais tecnologias:
+
+- [Docker](https://docker.com/)
+- [PostgreSQL](https://postgresql.org)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+
+## 📑 Pré-requisitos
+
+- Tenha o docker engine e o docker composer instalados e funcionando. [Docker engine - instalação](https://docs.docker.com/engine/install/)
+- Após clonar o projeto, rode o container usando o arquivo `docker.compose.yaml`.
+
+## 🔖 Instalação
+
+Para clonar e rodar esta aplicação, você precisará do [git](https://git-scm.com), [npm](https://www.npmjs.com/), [node](https://nodejs.org/en/).
+<br/>Versão do node usada neste projeto: `16.20.0`
+<br/>No seu terminal:
+
+```bash
+# Clonar o repositório
+$ git clone https://github.com/vitorluigiorsini/fullstack-todo-app.git
+```
+
+### 🖥️ Client
+
+```bash
+# Abra a pasta client
+$ cd client
+
+# Instale as dependencias
+$ npm install
+
+# Rode a aplicação web
+$ npm start
+
+# Crie o arquivo .env com base no .env.example
+# Navegue para http://localhost:3333
+# A aplicação irá reiniciar automaticamente se houver qualquer mudança nos arquivos fonte.
+```
+
+### ⚙️ Server
+
+```bash
+# Abra a pasta client
+$ cd server
+
+# Instale as dependencias
+$ npm install
+
+# Rode o servidor
+$ npm start
+
+# Crie o arquivo .env com base no .env.example
+# Use o arquivo api.http para testar os endpoints.
+# A aplicação irá reiniciar automaticamente se houver qualquer mudança nos arquivos fonte.
+```
+
+## ✨ TODO
+
+- responsividade
+- validação de formulário (ex.: `joi`)
+
+## 📝 License
+
+Este porjeto está sob a licensa MIT. Veja [LICENSE](LICENSE.md) para mais informações.
+
+---
+
+Feito com ♥ por Vitor Orsini - [Entre em contato](https://www.linkedin.com/in/vitorluigiorsini/)
