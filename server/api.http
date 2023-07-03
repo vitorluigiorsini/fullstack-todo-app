@@ -1,0 +1,48 @@
+### Registrar novo usuário
+POST http://localhost:3333/api/signup
+Content-Type: application/json
+
+{
+  "email": "teste@teste.com",
+  "password": "123"
+}
+
+### Fazer o login
+POST http://localhost:3333/api/login
+Content-Type: application/json
+
+{
+  "email": "teste@teste.com",
+  "password": "123"
+}
+
+### Listar tarefas
+GET http://localhost:3333/api/tasks/teste@teste.com
+
+### Criar uma tarefa
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Tarefa 10",
+  "description": "Decrição tarefa 10",
+  "dueDate": "29-08-2023",
+  "priority": "baixa",
+  "completed": false,
+  "userEmail": "teste@teste.com"
+}
+
+### Atualizar uma tarefa
+PUT http://localhost:3333/api/tasks/2
+Content-Type: application/json
+
+{
+  "title": "Tarefa 2",
+  "description": "Descrição tarefa 2",
+  "dueDate": "29-08-2023",
+  "priority": "baixa",
+  "completed": false
+}
+
+### Deletar uma tarefa
+DELETE http://localhost:3333/api/tasks/2
