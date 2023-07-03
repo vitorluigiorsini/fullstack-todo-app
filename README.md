@@ -70,7 +70,7 @@ $ npm start
 
 ## 📝 License
 
-Este porjeto está sob a licensa MIT. Veja [LICENSE](LICENSE.md) para mais informações.
+Este projeto está sob a licensa MIT. Veja [LICENSE](LICENSE.md) para mais informações.
 
 ---
 
