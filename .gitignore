@@ -1,6 +1,3 @@
 node_modules
-*.http
-.env*
-Dockerfile
-docker-compose.yaml
-.devcontainer
+package.lock.json
+.env
