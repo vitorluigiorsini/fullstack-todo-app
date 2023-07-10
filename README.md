@@ -42,14 +42,14 @@ $ npm install
 $ npm start
 
 # Crie o arquivo .env com base no .env.example
-# Navegue para http://localhost:3333
+# Navegue para http://localhost:3000
 # A aplicação irá reiniciar automaticamente se houver qualquer mudança nos arquivos fonte.
 ```
 
 ### ⚙️ Server
 
 ```bash
-# Abra a pasta client
+# Abra a pasta server
 $ cd server
 
 # Instale as dependencias
@@ -66,7 +66,10 @@ $ npm start
 ## ✨ TODO
 
 - responsividade
-- validação de formulário (ex.: `joi`)
+- validação de formulário (ex.: `joi`, `zod`)
+- styled components
+- clean architecture
+- solid
 
 ## 📝 License
 

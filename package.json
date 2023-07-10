@@ -6,9 +6,7 @@
   "scripts": {
     "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
     "server": "node ./server/server.js",
-    "client": "cd client && npm start",
-    "migrate:up": "npx sequelize-cli db:migrate",
-    "migrate:undo": "npx sequelize-cli db:migrate:undo"
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "Vitor Orsini",
