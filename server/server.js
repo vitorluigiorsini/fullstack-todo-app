@@ -4,7 +4,6 @@ const cors = require('cors')
 require('dotenv').config()
 
 const sequelize = require('./config/database')
-const userRouter = require('./src/routes/userRoutes')
 const router = require('./src/routes')
 const PORT = process.env.PORT || 3333
 
@@ -19,7 +18,6 @@ app.get('/', (req, res) => {
   res.send('API do Todo List')
 })
 
-app.use('/api', userRouter)
 app.use('/api', router)
 
 // Iniciar servidor
