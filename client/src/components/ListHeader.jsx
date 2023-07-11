@@ -1,6 +1,7 @@
-import Modal from './Modal'
 import { useState } from 'react'
 import { useCookies } from 'react-cookie'
+
+import { Modal } from '.'
 
 const ListHeader = ({ listName, getData }) => {
   const [, , removeCookie] = useCookies(null)

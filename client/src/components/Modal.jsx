@@ -17,13 +17,15 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
   const postData = async (e) => {
     e.preventDefault()
     try {
-      const response = await fetch(`${import.meta.env.VITE_URL}/api/tasks`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
+      const response = await fetch(
+        `${import.meta.env.VITE_BASE_URL}/api/tasks`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        }
+      )
       if (response.status === 201) {
-        console.log('WORKED')
         setShowModal(false)
         getData()
       }
@@ -43,7 +45,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
     }
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_URL}/api/tasks/${task.id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/tasks/${task.id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -65,8 +67,6 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
       ...data,
       [name]: value
     }))
-
-    console.log(data)
   }
 
   return (

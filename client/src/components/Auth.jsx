@@ -22,7 +22,7 @@ const Auth = () => {
     }
 
     const response = await fetch(
-      `${import.meta.env.VITE_URL}/api/${endpoint}`,
+      `${import.meta.env.VITE_BASE_URL}/api/users/${endpoint}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -32,13 +32,11 @@ const Auth = () => {
 
     const data = await response.json()
 
-    if (data.detail) {
-      setError(data.detail)
+    if (data.error) {
+      setError(data.error)
     } else {
       setCookie('Email', data.email)
       setCookie('AuthToken', data.token)
-
-      window.location.reload()
     }
   }
 

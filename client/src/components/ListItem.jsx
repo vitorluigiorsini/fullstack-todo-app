@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import TickIcon from './TickIcon'
-import Modal from './Modal'
+
+import { Modal, TickIcon } from '.'
 
 const ListItem = ({ task, getData }) => {
   const [showModal, setShowModal] = useState(false)
@@ -16,7 +16,7 @@ const ListItem = ({ task, getData }) => {
   const editData = async (updated) => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_URL}/api/tasks/${task.id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/tasks/${task.id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
@@ -35,7 +35,7 @@ const ListItem = ({ task, getData }) => {
   const deleteItem = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_URL}/api/tasks/${task.id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/tasks/${task.id}`,
         {
           method: 'DELETE'
         }
@@ -52,7 +52,6 @@ const ListItem = ({ task, getData }) => {
     const updated = { ...data, completed: !data.completed }
     setData(updated)
     editData(updated)
-    console.log(updated)
   }
 
   return (
