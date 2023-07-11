@@ -4,8 +4,8 @@ const cors = require('cors')
 require('dotenv').config()
 
 const sequelize = require('./config/database')
-const taskRouter = require('./src/routes/taskRoutes')
 const userRouter = require('./src/routes/userRoutes')
+const router = require('./src/routes')
 const PORT = process.env.PORT || 3333
 
 const app = express()
@@ -19,13 +19,15 @@ app.get('/', (req, res) => {
   res.send('API do Todo List')
 })
 
-app.use('/api', taskRouter)
 app.use('/api', userRouter)
+app.use('/api', router)
 
 // Iniciar servidor
 const startServer = async () => {
   try {
-    await sequelize.sync()
+    await sequelize.sync().then(() => {
+      console.log('Connected to database')
+    })
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`)
     })
