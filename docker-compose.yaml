@@ -21,9 +21,9 @@ services:
     volumes:
       - postgresql_data:/bitnami/postgresql
     environment:
-      POSTGRESQL_USERNAME: user_todo
-      POSTGRESQL_PASSWORD: user123
-      POSTGRESQL_DATABASE: todo_manager
+      POSTGRESQL_USERNAME: postgres
+      POSTGRESQL_PASSWORD: postgres123
+      POSTGRESQL_DATABASE: todo-app
 
 volumes:
   postgresql_data:

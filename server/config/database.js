@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize')
-const databaseConfig = require('./config')
+require('dotenv').config()
 
-const sequelize = new Sequelize(databaseConfig)
+const sequelize = new Sequelize(process.env.DATABASE_URL)
 
 module.exports = sequelize
